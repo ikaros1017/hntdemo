@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://www.jq22.com/jquery/vue.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div id="app">
+        <div class="box" @click="firstBox();count()">
+            <div v-for="(item,index) in arr1"  class="item" :style={width:item*30+'px'} :key=index>
+                {{item}}
+            </div>
+        </div>
+        <div class="box" @click="secondBox();count()" >
+            <div v-for="(item,index) in arr2"  class="item" :style={width:item*30+'px'} :key=index>
+                    {{item}}
+            </div>
+        </div>
+        <div class="box" @click="thirdBox();count()">
+            <div v-for="(item,index) in arr3"  class="item" :style={width:item*30+'px'} :key=index>
+                    {{item}}
+            </div>
+        </div>
+        <div class="input">
+            <input type="number" placeholder="输入生成的方块数量" v-model="num">
+            <button @click="start()">开始/重置</button>
+        </div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
