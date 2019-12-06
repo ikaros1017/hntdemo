@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>汉诺塔小游戏</title>
     <script src="https://www.jq22.com/jquery/vue.min.js"></script>
     <link rel="stylesheet" href="index.css">
+    <script type="text/javascript">
+        try{
+            if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                window.location.href="mindex.html";
+            }
+        }catch(e){}
+        </script>
 </head>
 <body>
     <div id="app">
@@ -26,7 +33,7 @@
             </div>
         </div>
         <div class="input">
-            <input type="number" placeholder="输入生成的方块数量" v-model="num">
+            <input type="number" placeholder="输入生成的方块数量" max="15" v-model="num">
             <button @click="start()">开始/重置</button>
         </div>
     </div>

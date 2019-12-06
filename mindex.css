@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+#app {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    /* float: left; */
+    width: 30%;
+    /* flex-grow: 1; */
+    height: 60%;
+    border: 1px solid aqua;
+    margin-top: 10px;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, .5);
+}
+
+.box:hover {
+    background-color: rgba(255, 255, 255, .8);
+}
+
+.item {
+    /* width: 200px; */
+    /* height: 30px; */
+    background: aqua;
+    text-align: center;
+    /* line-height: 30px; */
+    border-radius: 6px;
+    margin-bottom: 1px;
+}
+
+.input {
+    position: absolute;
+    bottom: 45px;
+    align-self: flex-end;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+input {
+    width: 180px;
+    height: 28px;
+    border-radius: 8px;
+}
+
+button {
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 8px;
+}
+
+@media screen and (orientation: portrait) {
+    html {
+        width: 100vmin;
+        height: 100vmax;
+    }
+
+    body {
+        width: 100vmin;
+        height: 100vmax;
+    }
+
+    #app {
+        width: 100vmax;
+        height: 100vmin;
+        transform-origin: top left;
+        transform: rotate(90deg) translate(0, -100vmin);
+    }
+}
+
+@media screen and (orientation: landscape) {
+    html {
+        width: 100vmax;
+        height: 100vmin;
+    }
+
+    body {
+        width: 100vmax;
+        height: 100vmin;
+    }
+
+    #app {
+        width: 100vmax;
+        height: 100vmin;
+    }
+}
